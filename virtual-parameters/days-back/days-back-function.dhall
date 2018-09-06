@@ -1,7 +1,8 @@
-    let Vpid = ./Vpid.dhall 
+    let Vpid =
+          https://raw.githubusercontent.com/plow-technologies/useful-public-export-abstractions/master/virtual-parameters/Vpid.dhall 
 
 in  let Param =
-          https://raw.githubusercontent.com/plow-technologies/useful-public-export-abstractions/master/virtual-parameters/days-back/ParamDefinition.dhall 
+          https://raw.githubusercontent.com/plow-technologies/useful-public-export-abstractions/master/virtual-parameters/ParamDefinition.dhall 
 
 in    λ(param : Param)
     → (   [ { sources =
