@@ -10,4 +10,11 @@ in  let map =
 in  let daysBack =
           https://raw.githubusercontent.com/plow-technologies/useful-public-export-abstractions/master/virtual-parameters/days-back/days-back-function.dhall 
 
-in  map Param (List Vpid) (λ(param : Param) → daysBack param) ([] : List Param)
+in  let paramList =
+            [ { pid = +1, location = +2, company = +3, site = +4 }
+            , { pid = +2, location = +2, company = +3, site = +4 }
+            , { pid = +3, location = +2, company = +3, site = +4 }
+            ]
+          : List Param
+
+in  map Param (List Vpid) (λ(param : Param) → daysBack param) paramList
